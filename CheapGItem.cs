@@ -74,6 +74,7 @@ namespace CheapReforging
 
                 Player player = Main.player[item.whoAmI];
                 player.GetModPlayer<CheapPlayer>().refundValue = (int)(reforgeCost * statMult);
+
                 reforgeCost = 0;
             }
         }

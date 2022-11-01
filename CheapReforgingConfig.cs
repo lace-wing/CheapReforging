@@ -28,7 +28,7 @@ namespace CheapReforging
 
         [Label(PriceKey + "UseFixed.Label")]
         [Tooltip(PriceKey + "UseFixed.Tooltip")]
-        [DefaultValue(true)]
+        [DefaultValue(false)]
         public bool useFixedPrice;
 
         [Label(PriceKey + "Fixed.Label")]
@@ -40,26 +40,26 @@ namespace CheapReforging
         [Label(PriceKey + "Add.Label")]
         [Tooltip(PriceKey + "Add.Tooltip")]
         [Range(int.MinValue, int.MaxValue)]
-        [DefaultValue(0)]
+        [DefaultValue(-100)]
         public int priceAdd;
 
         [Label(PriceKey + "Mult.Label")]
         [Tooltip(PriceKey + "Mult.Tooltip")]
         [Range(0.01f, 100f)]
-        [DefaultValue(1f)]
+        [DefaultValue(0.8f)]
         public float priceMult;
 
         [Header(RefundKey + "Header")]
 
         [Label(RefundKey + "UseRefund.Label")]
         [Tooltip(RefundKey + "UseRefund.Tooltip")]
-        [DefaultValue(false)]
+        [DefaultValue(true)]
         public bool useRefund;
 
         [Label(RefundKey + "Mult.Label")]
         [Tooltip(RefundKey + "Mult.Tooltip")]
         [Range(0.01f, 100)]
-        [DefaultValue(100f)]
+        [DefaultValue(2f)]
         public float refundMult;
     }
 }
