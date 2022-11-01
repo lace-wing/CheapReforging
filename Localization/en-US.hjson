@@ -1,0 +1,80 @@
+﻿Mods : 
+{
+	CheapReforging : 
+	{
+		Config : 
+		{
+			CRConfig : 
+			{
+				Label : "Cheap Reforging"
+			}
+			ReforgePrice : 
+			{
+				Header : "Reforge Price Modifications"
+
+				UseFixed : 
+				{
+					Label : "Enable fixed price"
+					Tooltip : 
+						'''
+						Reforging prices will be a fixed value
+						Other modifications will be disabled
+						'''
+				}
+				Fixed : 
+				{
+					Label : "Fixed price (copper)"
+					Tooltip : "Minimum price is 1 copper"
+				}
+				Add : 
+				{
+					Label : "Additive (copper)"
+					Tooltip : 
+						'''
+						Increases/decreases reforge prices by a certain number of copper
+						The value can be negative (will decrease)
+						Minimum price is 1 copper
+						Takes effect after the multiplicative modification
+						'''
+				}
+				Mult : 
+				{
+					Label : "Multiplicative"
+					Tooltip : 
+						'''
+						Multiplies reforge prices by a certain value
+						The value can be less than 1
+						Minimum multiplier is 0.01
+						Maximum multiplier is 100
+						Takes effect before the additive modification
+						'''
+				}
+			}
+			ReforgeRefund : 
+			{
+				Header : "Reforge Refund Settings"
+
+				UseRefund : 
+				{
+					Label : "Enable refund"
+					Tooltip : 
+						'''
+						If the rolled modifier reduces the reforged item's stat(s)
+						You will get refund based on percentage of stat(s) reduced
+						The refund will not be higher than 10x of the reforge price
+						'''
+				}
+				Mult : 
+				{
+					Label : "Refund multiplier"
+					Tooltip : 
+						'''
+						Multiply refunds by a certain value
+						Minimum multiplier is 0.01
+						Maximum multiplier is 100
+						'''
+				}
+			}
+		}
+	}
+}
