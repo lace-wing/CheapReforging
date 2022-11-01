@@ -12,7 +12,7 @@ using Terraria.ModLoader.Config;
 
 namespace CheapReforging
 {
-    [Label("Mods.CheapReforging.Config.CRConfig.Label")]
+    [Label("$Mods.CheapReforging.Config.CRConfig.Label")]
     public class CheapReforgingConfig : ModConfig
     {
         public override ConfigScope Mode => ConfigScope.ServerSide;
@@ -21,8 +21,8 @@ namespace CheapReforging
 
         //public override void OnLoaded() => Config = this;
 
-        private const string PriceKey = "Mods.CheapReforging.Config.ReforgePrice.";
-        private const string RefundKey = "Mods.CheapReforging.Config.ReforgeRefund.";
+        private const string PriceKey = "$Mods.CheapReforging.Config.ReforgePrice.";
+        private const string RefundKey = "$Mods.CheapReforging.Config.ReforgeRefund.";
 
         [Header(PriceKey + "Header")]
 
@@ -40,14 +40,14 @@ namespace CheapReforging
         [Label(PriceKey + "Add.Label")]
         [Tooltip(PriceKey + "Add.Tooltip")]
         [Range(int.MinValue, int.MaxValue)]
-        [DefaultValue(-100)]
+        [DefaultValue(-50)]
         public int priceAdd;
 
         [Label(PriceKey + "Mult.Label")]
         [Tooltip(PriceKey + "Mult.Tooltip")]
-        [Range(0.01f, 100f)]
-        [DefaultValue(0.8f)]
-        public float priceMult;
+        [Range(0, 10000f)]
+        [DefaultValue(90)]
+        public int priceMult;
 
         [Header(RefundKey + "Header")]
 
@@ -58,8 +58,8 @@ namespace CheapReforging
 
         [Label(RefundKey + "Mult.Label")]
         [Tooltip(RefundKey + "Mult.Tooltip")]
-        [Range(0.01f, 100)]
-        [DefaultValue(2f)]
-        public float refundMult;
+        [Range(0, 10000)]
+        [DefaultValue(200)]
+        public int refundMult;
     }
 }

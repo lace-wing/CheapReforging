@@ -27,7 +27,7 @@ namespace CheapReforging
             }
             else
             {
-                reforgePrice = (int)(reforgePrice * CheapReforgingConfig.Instance.priceMult);
+                reforgePrice = (int)(reforgePrice * CheapReforgingConfig.Instance.priceMult * 0.01f);
                 reforgePrice += CheapReforgingConfig.Instance.priceAdd;
                 reforgePrice = Math.Clamp(reforgePrice, 1, int.MaxValue);
             }
@@ -70,7 +70,7 @@ namespace CheapReforging
                     statMult += 0.5f * (1 - item.knockBack / origItem.knockBack);
                 }
 
-                statMult = Math.Clamp(statMult * refundMult, 0, 10);
+                statMult = Math.Clamp(statMult * refundMult * 0.01f, 0, 10);
 
                 Player player = Main.player[item.whoAmI];
                 player.GetModPlayer<CheapPlayer>().refundValue = (int)(reforgeCost * statMult);

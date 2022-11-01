@@ -1,0 +1,19 @@
+﻿v1.0.0.0
+
+- Addition
+	- ModConfigs
+		- Enable/disable fixed reforge price
+		- Change fixed price
+	- Functions
+		- Change reforge prices additively and multiplicatively
+		- Get refunds when negative prefixes are rolled
+		- All configurable!
+
+- 新增
+	- 模组配置
+		- 开/关固定重铸价格
+		- 调整固定价格
+	- 功能
+		- 以最终加算和最终乘算两种方式调整重铸价格
+		- 重铸到负面前缀时获得退款
+		- 皆可调整!

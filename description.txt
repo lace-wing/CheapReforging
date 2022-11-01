@@ -1,1 +1,5 @@
-Cheap Reforging is a pretty cool mod, it does...this. Modify this file with a description of your mod.
+Cheap Reforging is a simple quality of life mod. 
+It allows you to modify reforging prices and get refunds from the Goblin Tinker.
+
+便宜重铸是一个简单的辅助模组. 
+它允许你修改重铸价格并从哥布林奸商(bushi)那里拿到退款. 

@@ -15,7 +15,7 @@ namespace CheapReforging
 
         public override void ResetEffects()
         {
-            refundValue = 0;
+            //refundValue = 0;
         }
 
         public override void PostUpdate()

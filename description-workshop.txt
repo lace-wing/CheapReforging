@@ -1,0 +1,17 @@
+[h1] Cheap Reforging, a Reforge Price Tweak Mod [/h1]
+
+Cheap Reforging is a simple quality of life mod. 
+It allows you to modify reforging prices and get refunds from the Goblin Tinker.
+
+You can choose from: fixed price, additive modification and multiplicative modification
+- Set all reforge prices to 1 copper
+- Reduce reforge prices by 12 gold
+- Multiply reforge prices by 123%
+
+Also, enable reforge refund function to get refunds when negative prefixes are rolled
+- Rolled a -18% damage, +6 crit prefix, get 12% of the reforge price coin refund
+- Multiply the refund value by 777%
+
+This mod is open-sourced on [url=https://github.com/lyc-Lacewing/CheapReforging] GitHub [/url]
+
+Kindly report bugs or give suggestions using GitHub issue or comment below

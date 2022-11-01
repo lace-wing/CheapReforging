@@ -39,13 +39,13 @@
 				}
 				Mult : 
 				{
-					Label : "Multiplicative"
+					Label : "Multiplicative (percentage)"
 					Tooltip : 
 						'''
-						Multiplies reforge prices by a certain value
+						Multiplies reforge prices by a certain percentage
 						The value can be less than 1
-						Minimum multiplier is 0.01
-						Maximum multiplier is 100
+						Minimum multiplier is 1%
+						Maximum multiplier is 10000%
 						Takes effect before the additive modification
 						'''
 				}
@@ -66,12 +66,12 @@
 				}
 				Mult : 
 				{
-					Label : "Refund multiplier"
+					Label : "Refund multiplier (percentage)"
 					Tooltip : 
 						'''
-						Multiply refunds by a certain value
-						Minimum multiplier is 0.01
-						Maximum multiplier is 100
+						Multiply refunds by a certain percentage
+						Minimum multiplier is 1%
+						Maximum multiplier is 10000%
 						'''
 				}
 			}
