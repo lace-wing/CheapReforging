@@ -1,5 +1,5 @@
 Cheap Reforging is a simple quality of life mod. 
 It allows you to modify reforging prices and get refunds from the Goblin Tinker.
 
-±ãÒËÖØÖıÊÇÒ»¸ö¼òµ¥µÄ¸¨ÖúÄ£×é. 
-ËüÔÊĞíÄãĞŞ¸ÄÖØÖı¼Û¸ñ²¢´Ó¸ç²¼ÁÖ¼éÉÌ(bushi)ÄÇÀïÄÃµ½ÍË¿î. 
+ä¾¿å®œé‡é“¸æ˜¯ä¸€ä¸ªç®€å•çš„è¾…åŠ©æ¨¡ç»„. 
+å®ƒå…è®¸ä½ ä¿®æ”¹é‡é“¸ä»·æ ¼å¹¶ä»å“¥å¸ƒæ—å¥¸å•†(bushi)é‚£é‡Œæ‹¿åˆ°é€€æ¬¾. 
