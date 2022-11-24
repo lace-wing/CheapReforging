@@ -39,8 +39,7 @@ namespace CheapReforging
         {
             if (CheapReforgingConfig.Instance.useRefund)
             {
-                Item origItem = new Item();
-                origItem.SetDefaults(item.type);
+                Item origItem = ContentSamples.ItemsByType[item.type];
 
                 float statMult = 0;
                 float refundMult = CheapReforgingConfig.Instance.refundMult;
