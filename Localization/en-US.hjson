@@ -1,35 +1,28 @@
-﻿Mods : 
-{
-	CheapReforging : 
-	{
-		Config : 
-		{
-			CRConfig : 
-			{
-				Label : "Cheap Reforging"
-			}
-			ReforgePrice : 
-			{
-				Header : "Reforge Price Modifications"
+Mods: {
+	CheapReforging: {
+		Config: {
+			CRConfig.Label: Cheap Reforging
 
-				UseFixed : 
-				{
-					Label : "Enable fixed price"
-					Tooltip : 
+			ReforgePrice: {
+				Header: Reforge Price Modifications
+
+				UseFixed: {
+					Label: Enable fixed price
+					Tooltip:
 						'''
 						Reforging prices will be a fixed value
 						Other price modifications will be disabled
 						'''
 				}
-				Fixed : 
-				{
-					Label : "Fixed price (copper)"
-					Tooltip : "Minimum price is 1 copper"
+
+				Fixed: {
+					Label: Fixed price (copper)
+					Tooltip: Minimum price is 1 copper
 				}
-				Add : 
-				{
-					Label : "Additive (copper)"
-					Tooltip : 
+
+				Add: {
+					Label: Additive (copper)
+					Tooltip:
 						'''
 						Increases/decreases reforge prices by a certain number of copper
 						The value can be negative (will decrease)
@@ -37,10 +30,10 @@
 						Takes effect after the multiplicative modification
 						'''
 				}
-				Mult : 
-				{
-					Label : "Multiplicative (percentage)"
-					Tooltip : 
+
+				Mult: {
+					Label: Multiplicative (percentage)
+					Tooltip:
 						'''
 						Multiplies reforge prices by a certain percentage
 						The value can be less than 1
@@ -50,29 +43,66 @@
 						'''
 				}
 			}
-			ReforgeRefund : 
-			{
-				Header : "Reforge Refund Settings"
 
-				UseRefund : 
-				{
-					Label : "Enable refund"
-					Tooltip : 
+			ReforgeRefund: {
+				Header: Reforge Refund Settings
+
+				UseRefund: {
+					Label: Enable refund
+					Tooltip:
 						'''
 						If the rolled modifier reduces the reforged item's stat(s)
 						You will get refund based on percentage of stat(s) reduced
 						The refund will not be higher than 10x of the reforge price
 						'''
 				}
-				Mult : 
-				{
-					Label : "Refund multiplier (percentage)"
-					Tooltip : 
+
+				Mult: {
+					Label: Refund multiplier (percentage)
+					Tooltip:
 						'''
 						Multiply refunds by a certain percentage
 						Minimum multiplier is 1%
 						Maximum multiplier is 10000%
 						'''
+				}
+			}
+		}
+
+		Configs: {
+			CheapReforgingConfig: {
+				DisplayName: Cheap Reforging
+
+				Header: Reforge Price Modifications
+
+				useFixedPrice: {
+					Label: use Fixed Price
+					Tooltip: ""
+				}
+
+				fixedPrice: {
+					Label: fixed Price
+					Tooltip: ""
+				}
+
+				priceAdd: {
+					Label: price Add
+					Tooltip: ""
+				}
+
+				priceMult: {
+					Label: price Mult
+					Tooltip: ""
+				}
+
+				useRefund: {
+					Label: use Refund
+					Tooltip: ""
+				}
+
+				refundMult: {
+					Label: refund Mult
+					Tooltip: ""
 				}
 			}
 		}

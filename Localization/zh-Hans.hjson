@@ -1,35 +1,28 @@
-﻿Mods : 
-{
-	CheapReforging : 
-	{
-		Config : 
-		{
-			CRConfig : 
-			{
-				Label : "便宜重铸"
-			}
-			ReforgePrice : 
-			{
-				Header : "重铸价格修改"
+Mods: {
+	CheapReforging: {
+		Config: {
+			CRConfig.Label: 便宜重铸
 
-				UseFixed : 
-				{
-					Label : "启用固定价格"
-					Tooltip : 
+			ReforgePrice: {
+				Header: 重铸价格修改
+
+				UseFixed: {
+					Label: 启用固定价格
+					Tooltip:
 						'''
 						重铸价格将被设为定值
 						其它价格修改将会失效
 						'''
 				}
-				Fixed : 
-				{
-					Label : "固定价格 (铜)"
-					Tooltip : "最低价格为1铜"
+
+				Fixed: {
+					Label: 固定价格 (铜)
+					Tooltip: 最低价格为1铜
 				}
-				Add : 
-				{
-					Label : "价格加算 (铜)"
-					Tooltip : 
+
+				Add: {
+					Label: 价格加算 (铜)
+					Tooltip:
 						'''
 						重铸价格提升/降低一定数量的铜币
 						加算数值可以是负数 (将会降低价格)
@@ -37,10 +30,10 @@
 						于价格乘算后生效
 						'''
 				}
-				Mult : 
-				{
-					Label : "价格乘算 (百分比)"
-					Tooltip : 
+
+				Mult: {
+					Label: 价格乘算 (百分比)
+					Tooltip:
 						'''
 						重铸价格乘一个百分比
 						最小乘数为1%
@@ -49,29 +42,64 @@
 						'''
 				}
 			}
-			ReforgeRefund : 
-			{
-				Header : "重铸退款设置"
 
-				UseRefund : 
-				{
-					Label : "启用重铸退款"
-					Tooltip : 
+			ReforgeRefund: {
+				Header: 重铸退款设置
+
+				UseRefund: {
+					Label: 启用重铸退款
+					Tooltip:
 						'''
 						若敲到的前缀降低了物品的数值
 						你将根据降低的百分比获得退款
 						退款不会高于重铸价格的10倍
 						'''
 				}
-				Mult : 
-				{
-					Label : "退款乘数 (百分比)"
-					Tooltip : 
+
+				Mult: {
+					Label: 退款乘数 (百分比)
+					Tooltip:
 						'''
 						退款量乘一个百分比
 						最小乘数为1%
 						最大乘数为10000%
 						'''
+				}
+			}
+		}
+
+		Configs: {
+			CheapReforgingConfig: {
+				// DisplayName: Cheap Reforging Config
+
+				useFixedPrice: {
+					// Label: use Fixed Price
+					// Tooltip: ""
+				}
+
+				fixedPrice: {
+					// Label: fixed Price
+					// Tooltip: ""
+				}
+
+				priceAdd: {
+					// Label: price Add
+					// Tooltip: ""
+				}
+
+				priceMult: {
+					// Label: price Mult
+					// Tooltip: ""
+				}
+
+				useRefund: {
+					// Label: use Refund
+					// Tooltip: ""
+				}
+
+				refundMult: {
+					// Label: refund Mult
+					// Tooltip: ""
 				}
 			}
 		}
