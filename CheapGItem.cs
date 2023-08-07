@@ -13,36 +13,35 @@ namespace CheapReforging
 
         public override bool ReforgePrice(Item item, ref int reforgePrice, ref bool canApplyDiscount)
         {
-            if (CheapReforgingConfig.Instance.useFixedPrice)
+            if (CheapConfig.Instance.UseFixedPrice)
             {
-                reforgePrice = CheapReforgingConfig.Instance.fixedPrice;
+                reforgePrice = CheapConfig.Instance.FixedPrice;
                 reforgePrice = Math.Clamp(reforgePrice, 1, int.MaxValue);
                 canApplyDiscount = false;
             }
             else
             {
-                reforgePrice = (int)(reforgePrice * CheapReforgingConfig.Instance.priceMult * 0.01f);
-                reforgePrice += CheapReforgingConfig.Instance.priceAdd;
+                reforgePrice = (int)(reforgePrice * CheapConfig.Instance.PricePct * 0.01f);
+                reforgePrice += CheapConfig.Instance.PriceAdd;
                 reforgePrice = Math.Clamp(reforgePrice, 1, int.MaxValue);
             }
             reforgeCost = reforgePrice;
             return false;
         }
-
         public override void PostReforge(Item item)
         {
-            if (CheapReforgingConfig.Instance.useRefund)
+            if (CheapConfig.Instance.UseRefund)
             {
                 Item origItem = ContentSamples.ItemsByType[item.type];
 
                 float statMult = 0;
-                float refundMult = CheapReforgingConfig.Instance.refundMult;
+                float refundPct = CheapConfig.Instance.RefundPct;
 
-                if (origItem.damage >= 0)
+                if (origItem.damage > 0)
                 {
                     statMult += 1 - item.damage / (float)origItem.damage;
                 }
-                if (origItem.crit >= 0)
+                if (origItem.crit > 0)
                 {
                     statMult += 1 - item.crit / (float)origItem.crit;
                 }
@@ -63,10 +62,9 @@ namespace CheapReforging
                     statMult += 0.5f * (1 - item.knockBack / origItem.knockBack);
                 }
 
-                statMult = Math.Clamp(statMult * refundMult * 0.01f, 0, 10);
+                statMult = Math.Clamp(statMult * refundPct * 0.01f, 0, 10);
 
-                Player player = Main.player[item.whoAmI];
-                player.GetModPlayer<CheapPlayer>().refundValue = (int)(reforgeCost * statMult);
+                Main.LocalPlayer.GetModPlayer<CheapPlayer>().refundValue = (int)(reforgeCost * statMult);
 
                 reforgeCost = 0;
             }

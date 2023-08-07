@@ -13,42 +13,14 @@ namespace CheapReforging
     {
         public int refundValue = 0;
 
-        public override void ResetEffects()
-        {
-            //refundValue = 0;
-        }
-
         public override void PostUpdate()
         {
             if (refundValue > 0)
             {
-                int copperNum = 0;
-                int silverNum = 0;
-                int goldNum = 0;
-                int platinumNum = 0;
-
-                if (refundValue < 100)
-                {
-                    copperNum = refundValue;
-                }
-                else if (refundValue < 10000)
-                {
-                    silverNum = refundValue / 100;
-                    copperNum = refundValue % 100;
-                }
-                else if (refundValue < 1000000)
-                {
-                    goldNum = refundValue / 10000;
-                    silverNum = refundValue % 10000 / 100;
-                    copperNum = refundValue % 100;
-                }
-                else
-                {
-                    platinumNum = refundValue / 1000000;
-                    goldNum = refundValue % 1000000 / 10000;
-                    silverNum = refundValue % 10000 / 100;
-                    copperNum = refundValue % 100;
-                }
+                int platinumNum = refundValue / 1000000;
+                int goldNum = refundValue % 1000000 / 10000;
+                int silverNum = refundValue % 10000 / 100;
+                int copperNum = refundValue % 100;
 
                 Player.QuickSpawnItem(Item.GetSource_TownSpawn(), ItemID.CopperCoin, copperNum);
                 Player.QuickSpawnItem(Item.GetSource_TownSpawn(), ItemID.SilverCoin, silverNum);
