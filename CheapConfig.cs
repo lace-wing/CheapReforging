@@ -24,7 +24,7 @@ namespace CheapReforging
         [DefaultValue(-50)]
         public int PriceAdd;
 
-        [Range(0, 10000f)]
+        [Range(0, 10000)]
         [DefaultValue(90)]
         public int PricePct;
 

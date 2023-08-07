@@ -37,27 +37,27 @@ namespace CheapReforging
                 float statMult = 0;
                 float refundPct = CheapConfig.Instance.RefundPct;
 
-                if (origItem.damage > 0)
+                if (origItem.damage > item.damage)
                 {
                     statMult += 1 - item.damage / (float)origItem.damage;
                 }
-                if (origItem.crit > 0)
+                if (origItem.crit > item.damage)
                 {
                     statMult += 1 - item.crit / (float)origItem.crit;
                 }
-                if (item.useTime > 0)
+                if (item.useTime > origItem.useTime)
                 {
                     statMult += 1 - origItem.useTime / (float)item.useTime;
                 }
-                if (origItem.shootSpeed > 0)
+                if (origItem.shootSpeed > item.shootSpeed)
                 {
                     statMult += 1 - item.shootSpeed / (float)origItem.shootSpeed;
                 }
-                if (origItem.mana > 0)
+                if (item.mana > origItem.mana)
                 {
-                    statMult += 1 - item.mana / (float)origItem.mana;
+                    statMult += 1 - origItem.mana / (float)item.mana;
                 }
-                if (origItem.knockBack > 0)
+                if (origItem.knockBack > item.knockBack)
                 {
                     statMult += 0.5f * (1 - item.knockBack / origItem.knockBack);
                 }
