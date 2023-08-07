@@ -1,108 +1,61 @@
 Mods: {
 	CheapReforging: {
-		Config: {
-			CRConfig.Label: Cheap Reforging
+		Configs: {
+			CheapConfig: {
+				DisplayName: Cheap Config
 
-			ReforgePrice: {
-				Header: Reforge Price Modifications
+				Headers: {
+					Note: Other mods altering reforge process may interfere this mod.
+					Price: Reforge Price Modifications
+					Refund: Reforge Refund Settings
+				}
 
-				UseFixed: {
-					Label: Enable fixed price
+				UseFixedPrice: {
+					Label: Enable Fixed Price
 					Tooltip:
 						'''
-						Reforging prices will be a fixed value
-						Other price modifications will be disabled
+						Reforging prices will be a fixed value.
+						Other price modifications will be disabled.
 						'''
 				}
 
-				Fixed: {
-					Label: Fixed price (copper)
-					Tooltip: Minimum price is 1 copper
+				FixedPrice: {
+					Label: Fixed Price (copper)
+					Tooltip: Unit of this value is copper.
 				}
 
-				Add: {
-					Label: Additive (copper)
+				PriceAdd: {
+					Label: Additive Price (copper)
 					Tooltip:
 						'''
-						Increases/decreases reforge prices by a certain number of copper
-						The value can be negative (will decrease)
-						Minimum price is 1 copper
-						Takes effect after the multiplicative modification
+						Increases reforge prices by this amount of copper.
+						The value can be negative, which will reduce the price.
+						Takes effect after the percentage modification.
 						'''
 				}
 
-				Mult: {
-					Label: Multiplicative (percentage)
+				PricePct: {
+					Label: Percentage Price
 					Tooltip:
 						'''
-						Multiplies reforge prices by a certain percentage
-						The value can be less than 1
-						Minimum multiplier is 1%
-						Maximum multiplier is 10000%
-						Takes effect before the additive modification
+						Multiplies reforge prices by this percentage.
+						Takes effect before the additive modification.
 						'''
 				}
-			}
-
-			ReforgeRefund: {
-				Header: Reforge Refund Settings
 
 				UseRefund: {
-					Label: Enable refund
+					Label: Enable Refund
 					Tooltip:
 						'''
-						If the rolled modifier reduces the reforged item's stat(s)
 						You will get refund based on percentage of stat(s) reduced
-						The refund will not be higher than 10x of the reforge price
+						if the new modifier reduces reforged item's stat(s).
+						The refund will not be higher than 10x of the reforge price.
 						'''
 				}
 
-				Mult: {
-					Label: Refund multiplier (percentage)
-					Tooltip:
-						'''
-						Multiply refunds by a certain percentage
-						Minimum multiplier is 1%
-						Maximum multiplier is 10000%
-						'''
-				}
-			}
-		}
-
-		Configs: {
-			CheapReforgingConfig: {
-				DisplayName: Cheap Reforging
-
-				Header: Reforge Price Modifications
-
-				useFixedPrice: {
-					Label: use Fixed Price
-					Tooltip: ""
-				}
-
-				fixedPrice: {
-					Label: fixed Price
-					Tooltip: ""
-				}
-
-				priceAdd: {
-					Label: price Add
-					Tooltip: ""
-				}
-
-				priceMult: {
-					Label: price Mult
-					Tooltip: ""
-				}
-
-				useRefund: {
-					Label: use Refund
-					Tooltip: ""
-				}
-
-				refundMult: {
-					Label: refund Mult
-					Tooltip: ""
+				RefundPct: {
+					Label: Refund Percentage
+					Tooltip: Multiplies refunds by this percentage.
 				}
 			}
 		}
